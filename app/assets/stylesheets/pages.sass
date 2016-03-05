@@ -13,11 +13,14 @@ body
   background: url(image_path('confetti.png')), $bg
   font-family: learningcurve_ot-webfont
   font-size: calc(25px + 1vh + 1vw)
+  color: white
 div,
 h1,
 a
   backface-visibility: hidden
   -webkit-backface-visibility: hidden
+.text
+  fill: white
 .pane
   display: block
   position: absolute
@@ -34,7 +37,6 @@ a
   left: 40%
   width: 30%
   height: 38%
-  backface-visibility: hidden
   g
     fill: $pink
 .blue
@@ -44,30 +46,38 @@ a
   height: 52%
   g
     fill: $blue
-  .text
 .light-blue
-  background: url(image_path('light_blue.png'))
   top: 20%
   left: 50%
+  g
+    fill: $light_blue
 .dark-yellow
-  background: url(image_path('dark_yellow.png'))
   top: 5%
   left: 50%
-  transform: translateX(-50%)
+  g
+    fill: $dark_yellow
 .yellow
-  background: url(image_path('yellow.png'))
   top: 10%
   left: 5%
+  g
+    fill: $yellow
+  .text
+    fill: purple
 .grey
-  background: url(image_path('grey.png'))
   top: 50%
   left: 3%
+  g
+    fill: $grey
+  .text
+    fill: purple
 .mauve
-  background: url(image_path('mauve.png'))
   top: 60%
   left: 15%
+  g
+    fill: $mauve
 .red
-  background: url(image_path('red.png'))
+  g
+    fill: $red
 .pane
   background-size: contain
   background-repeat: no-repeat
