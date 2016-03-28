@@ -4,32 +4,6 @@
 
   displayName: 'Page'
 
-  componentDidMount: ->
-    console.log 'mounted'
-    vw = $(window).width()
-    tl = new TimelineMax()
-    tl.from('.enter-right--date', 1, {
-      x: vw
-      })
-    tl.from('.grow.date', 2, {
-      scale: 0,
-      ease: Back.easeOut
-      })
-    tl.from('.grow.date', 0.5, {
-      opacity: 0,
-      ease: Power0.easeNone
-      }, '-=2')
-    tl.from('.enter-right--location', 1, {
-      x: vw
-      })
-    tl.from('.grow.location', 2, {
-      scale: 0,
-      ease: Back.easeOut
-      })
-    tl.from('.grow.location', 0.5, {
-      opacity: 0,
-      ease: Power0.easeNone
-      }, '-=2')
 
   render: ->
     div className: 'page',
