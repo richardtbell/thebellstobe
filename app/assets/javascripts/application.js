@@ -19,4 +19,5 @@
 //= require 'greensock/TweenMax'
 //= require 'greensock/TimelineMax'
 //= require 'greensock/easing/EasePack'
+//= require 'svg-morpheus'
 //= require_tree .
