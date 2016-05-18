@@ -7,17 +7,20 @@ body
   height: 100vh
   margin: 0
   // background: url(image_path('confetti.png')), $bg
-  background-color: $bg
+  background-color: hsla(240, 76%, 43%, 1)
   background-repeat: no-repeat
   background-size: cover
   font-family: learningcurve_ot-webfont
   font-size: calc(25px + 1vh + 1vw)
-  color: white
+  color: hsla(240, 76%, 43%, 1)
+  overflow: hidden
 
 .text
   position: absolute
   left: 50%
   top: 50%
+  text-align: center
+
   &:first-child
     transform: translate(-50%, -90%)
   &:last-child
@@ -29,8 +32,8 @@ body
 .ball
   position: absolute
   display: block
-  height: 300px
-  width: 300px
+  height: 200px
+  width: 200px
   border-radius: 50%
 
 .pink
@@ -118,16 +121,4 @@ body
   +breakpoint(desktop)
     top: 61.5%
     left: 16%
-
-
-.red
-  top: 22%
-  left: 63%
-  z-index: -1
-  background-color: $red
-
-  +breakpoint(tablet)
-  +breakpoint(desktop)
-    top: 13%
-    left: 60%
 
