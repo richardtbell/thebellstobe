@@ -11,12 +11,27 @@
       movement = Math.random() * 50
       timing = Math.random() + 1
       scale = Math.random() * 0.5 + 1
-      console.log movement
       tween = TweenMax.to($ball, timing, {y:movement, scale:scale, repeat:-1, yoyo:true, repeatDelay:0});
 
   componentDidMount: ->
     @animateBalls()
 
+  showVenueDetails: (e) ->
+    $ball = $(e.target).closest('.ball')
+    $viewport = $(window)
+    vw = $viewport.width()
+    vh = $viewport.height()
+    min = Math.min(vw, vh)
+    width = 0.85 * min
+    height = 0.85 * min
+    TweenMax.killTweensOf($ball)
+    $ball.css
+      'left': '50%'
+      'top': '50%',
+      'width': width,
+      'height': height,
+      'z-index': 100,
+      'transform': 'translate(-50%, -50%)'
 
   render: ->
     div className: 'page',
@@ -27,7 +42,7 @@
       div className:'ball blue',
         span className:"text", "are getting married!"
 
-      div className:"ball light-blue",
+      div className:"ball light-blue", onClick:@showVenueDetails,
         span className:"text", "venue"
 
       div className:"ball dark-yellow",
