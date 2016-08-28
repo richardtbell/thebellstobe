@@ -6,12 +6,13 @@
 
   componentWillMount: ->
     scripta = document.createElement("script")
-    scripta.text =
-      "function initMap() {
+    # chilli = 'assets/chilli.png'
+    chilli = "<%= asset_path('chilli.png') %>"
+    scripta.text = "function initMap() {
               var myLatLng = {lat: 55.9438671, lng: -3.2041671};
               var mapDiv = document.getElementById('map');
               var image = {
-                url: 'assets/chilli.png',
+                url: '" + chilli + "',
                 scaledSize: new google.maps.Size(30, 66),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(0, 66)
@@ -52,9 +53,9 @@
         a href:'mailto:"thebellstobe@gmail.com"', 'thebellstobe@gmail.com'
         p null, ' by '
         strong null, '22nd September.'
-        img className:'chilli', src:'/assets/chilli.png'
-        img className:'flower', src:'/assets/flower.png'
-        img className:'rock', src:'/assets/rock.png'
+        img className:'chilli', src: "<%= asset_path('chilli.png') %>"
+        img className:'flower', src: "<%= asset_path('flower.png') %>"
+        img className:'rock', src: "<%= asset_path('rock.png') %>"
       div className: 'page details',
         h2 null, 'Details:'
         p null, 'Ceremony begins: 1:30 pm'
@@ -67,9 +68,9 @@
           p null, 'Edinburgh'
           p null, 'EH3 9BP'
         div id:'map'
-        img className:'grapefruit', src:'/assets/grapefruit.png'
-        img className:'lemon', src:'/assets/lemon.png'
-        img className:'blob', src:'/assets/blob.png'
+        img className:'grapefruit', src: "<%= asset_path('grapefruit.png') %>"
+        img className:'lemon', src: "<%= asset_path('lemon.png') %>"
+        img className:'blob', src: "<%= asset_path('blob.png') %>"
       div className: 'page transport',
         h2 null, 'Transport information:'
         p null, "Central Hall is a short walk from "
@@ -78,9 +79,9 @@
         a href:'https://www.google.co.uk/maps/place/Waverley+Railway+Station,+Edinburgh+EH1+1BB/@55.9519331,-3.1917618,17z/data=!3m1!4b1!4m5!3m4!1s0x4887c78fbef1f32b:0x7161189432e275bc!8m2!3d55.9519331!4d-3.1895678', 'Edinburgh Waverley Station'
         span null, ". Unfortunately there is no free parking on site, but there's plenty of parking nearby. "
         a href:'http://www.centralvenues.org/wp-content/uploads/2013/11/Central-Hall-how-to-find-us-access-details.pdf', 'Find out more here.'
-        img className:'banana', src:'/assets/banana.png'
+        img className:'banana', src: "<%= asset_path('banana.png') %>"
       div className: 'page giftlist',
         h2 null, 'Giftlist:'
         p null, 'The most important gift to us is to have you share in our day, but if you really want to get us something we are registered at John Lewis with gift list number: 677417.'
         p null, "We're moving in to a small flat, so we'd really appreciate if you only got us stuff from the giftlist"
-        img className:'plant', src:'/assets/plant.png'
+        img className:'plant', src: "<%= asset_path('plant.png') %>"
