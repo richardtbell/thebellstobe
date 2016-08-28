@@ -1,12 +1,9 @@
-$bg: #D3D0C4
-$pink: #FF54D2
-$blue: #0326FE
-$light-blue: #A7C8D4
-$dark-yellow: #C6E333
-$yellow: #FBF411
-$grey: #E1DBE4
-$mauve: #FF9C88
-$red: #FF493A
+$bg: #FDD7CF
+$bg-alt: #FFF
+
+$text: #1413FF
+$text-alt: #4BA6F8
+
 
 =breakpoint($point)
   @if $point == desktop
@@ -25,147 +22,60 @@ $red: #FF493A
     @media (max-width: 600px)
       @content
 
+*
+  margin: 0
+  padding: 0
+  border: 0
+  outline: 0
+  font-size: 100%
+  vertical-align: baseline
+  background: transparent
 
+html
+  font-size: calc(25px + 1vh + 1vw)
 
 body
   position: relative
-  width: 100%
-  height: 100vh
   margin: 0
-  background: url(image_path('confetti.png')), $bg
-  background-repeat: no-repeat
-  background-size: cover
   font-family: learningcurve_ot-webfont
-  font-size: calc(25px + 1vh + 1vw)
-  color: white
+  color: $text
 
-.text
-  fill: white
+.page
+  height: 100vh
+  text-align: center
+  padding: 50px
 
-.pane
-  position: absolute
-  display: block
-  height: auto
+  &:nth-child(odd)
+    background: $bg
 
-.pink
-  top: 40%
-  left: 35%
-  z-index: 10
+  &:nth-child(even)
+    background: $bg-alt
+
+.title
+  font-size: 0.75rem
+  font-weight: normal
+
+.name
+  font-size: 2rem
+  font-weight: bold
+
+.important
+  font-size: 1.5rem
+  font-weight: bold
+
+p
+  margin: 0
+
+a
+  color: $text-alt
+
+.address
+  display: inline-block
   width: 50%
+  vertical-align: top
 
-  +breakpoint(tablet)
-    width: 40%
-
-  +breakpoint(desktop)
-    top: 38%
-    left: 38%
-    width: 29%
-  g
-    fill: $pink
-
-.blue
-  bottom: 5%
-  right: 5%
-  z-index: 2
-  width: 80%
-  +breakpoint(tablet)
-    width: 70%
-  +breakpoint(desktop)
-    bottom: 2%
-    right: 2%
-    width: 65%
-
-  g
-    fill: $blue
-
-.light-blue
-  top: 25%
-  left: 53%
-  width: 45%
-  z-index: 1
-  +breakpoint(tablet)
-    top: 21%
-    left: 60%
-    width: 40%
-  +breakpoint(desktop)
-    top: 10%
-    left: 56%
-    width: 37%
-
-  g
-    fill: $light_blue
-
-.dark-yellow
-  top: 5%
-  left: 43%
-  width: 25%
-  +breakpoint(tablet)
-    width: 20%
-  +breakpoint(desktop)
-    left: 38%
-    width: 16%
-
-  g
-    fill: $dark_yellow
-
-.yellow
-  top: 20%
-  left: 3.5%
-  width: 45%
-  +breakpoint(tablet)
-    top: 15%
-    width: 40%
-  +breakpoint(desktop)
-    top: 6%
-    width: 34.5%
-
-  g
-    fill: $yellow
-
-  .text
-    fill: purple
-
-.grey
-  top: 45.5%
-  left: 3%
-  width: 40%
-  +breakpoint(tablet)
-    width: 35%
-  +breakpoint(desktop)
-    width: 29%
-
-  g
-    fill: $grey
-
-  .text
-    fill: purple
-
-.mauve
-  top: 70%
-  left: 20%
-  width: 33%
-  +breakpoint(tablet)
-    top: 65%
-    width: 28%
-  +breakpoint(desktop)
-    top: 61.5%
-    left: 16%
-    width: 23%
-
-  g
-    fill: $mauve
-
-.red
-  top: 22%
-  left: 63%
-  z-index: -1
-  width: 23%
-  +breakpoint(tablet)
-    width: 18%
-  +breakpoint(desktop)
-    top: 13%
-    left: 60%
-    width: 15%
-
-  g
-    fill: $red
+#map
+  display: inline-block
+  vertical-align: top
+  width: 50%
+  height: 50vh
