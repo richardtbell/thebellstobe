@@ -31,7 +31,10 @@ $text: #333
   background: transparent
 
 html
-  font-size: 30px
+  font-size: 16px
+
+  +breakpoint(tablet)
+    font-size: 30px
 
 body
   position: relative
@@ -71,6 +74,7 @@ body
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
+  z-index: 20
 
 .small
   font-size: 16px
@@ -121,8 +125,13 @@ h2
   float: right
 
 .timings
-  width: 50%
+  width: 100%
   margin: auto
+  height: 40px
+
+  +breakpoint(tablet)
+    width: 50%
+
 
 #map
   height: 50vh
@@ -145,19 +154,21 @@ img
 
 .chilli
   position: absolute
-  left: 1%
-  top: 50%
-  transform: translateY(-50%)
+  left: 5%
+  top: 10%
   height: 20%
 
   +breakpoint(tablet)
+    top: 50%
+    transform: translateY(-50%)
     height: 60%
     left: 5%
 
 .flower
   position: absolute
-  right: 1%
+  right: 5%
   height: 20%
+  top: 5%
 
   +breakpoint(tablet)
     top: 5%
@@ -167,20 +178,19 @@ img
 .rock
   position: absolute
   right: 2%
-  bottom: 3%
-  height: 10%
+  bottom: -5%
+  height: 30%
 
   +breakpoint(tablet)
     bottom: -8%
     height: 45%
     right: 15%
 
-
 .lemon
   position: absolute
-  left: 5%
-  top: 2%
-  height: 10%
+  left: 10%
+  top: 10%
+  height: 20%
 
   +breakpoint(tablet)
     height: 25%
@@ -191,38 +201,53 @@ img
   position: absolute
   right: 5%
   bottom: -2%
-  height: 10%
+  height: 30%
 
   +breakpoint(tablet)
     height: 40%
     bottom: -8%
 
 .blob
-  position: absolute
-  left: 3%
-  top: 45%
-  height: 10%
+  display: none
 
   +breakpoint(tablet)
+    display: block
+    position: absolute
     height: 30%
     top: 10%
     left: 5%
 
 .plant
-  height: 40%
   position: absolute
-  top: -15%
-  left: 5%
+  height: 25%
+  top: -5%
+  left: 15%
+
+  +breakpoint(tablet)
+    height: 40%
+    top: -15%
+    left: 5%
 
 .banana
-  height: 45%
   position: absolute
-  bottom: -5%
+  height: 35%
+  bottom: -15%
   right: 5%
+
+  +breakpoint(tablet)
+    height: 45%
+    bottom: -5%
+    right: 5%
+
 
 .cracker
   position: absolute
-  left: 8%
-  bottom: 10%
-  height: 25%
+  left: 20%
+  bottom: 5%
+  height: 20%
+
+  +breakpoint(tablet)
+    left: 8%
+    bottom: 10%
+    height: 25%
 
