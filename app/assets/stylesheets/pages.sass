@@ -34,6 +34,8 @@ html
   font-size: 16px
 
   +breakpoint(tablet)
+    font-size: 25px
+  +breakpoint(laptop)
     font-size: 30px
 
 body
@@ -103,11 +105,15 @@ h2
 
 .address
   margin-top: 40px
+
   +breakpoint(tablet)
     display: inline-block
-    width: 50%
     vertical-align: middle
+    width: 40%
     text-align: center
+
+  +breakpoint(laptop)
+    width: 50%
 
 .left-align
   text-align: left
@@ -119,10 +125,16 @@ h2
   display: inline-block
 
 .pull-left
+  position: relative
+  width: 75%
   float: left
+  text-align: left
 
 .pull-right
+  position: relative
+  width: 25%
   float: right
+  text-align: right
 
 .timings
   width: 100%
@@ -130,8 +142,10 @@ h2
   height: 40px
 
   +breakpoint(tablet)
-    width: 50%
+    width: 75%
 
+  +breakpoint(laptop)
+    width: 50%
 
 #map
   height: 50vh
@@ -141,7 +155,10 @@ h2
   +breakpoint(tablet)
     display: inline-block
     vertical-align: middle
-    width: calc(50% - 2px)
+    width: 40%
+
+  +breakpoint(laptop)
+    width: 50%
 
 
 
@@ -158,7 +175,7 @@ img
   top: 5%
   height: 30%
 
-  +breakpoint(tablet)
+  +breakpoint(laptop)
     top: 50%
     transform: translateY(-50%)
     height: 60%
@@ -170,7 +187,7 @@ img
   height: 20%
   top: 5%
 
-  +breakpoint(tablet)
+  +breakpoint(laptop)
     top: 5%
     height: 30%
     right: 10%
@@ -181,7 +198,7 @@ img
   bottom: -5%
   height: 30%
 
-  +breakpoint(tablet)
+  +breakpoint(laptop)
     bottom: -8%
     height: 45%
     right: 15%
@@ -192,7 +209,7 @@ img
   top: 10%
   height: 20%
 
-  +breakpoint(tablet)
+  +breakpoint(laptop)
     height: 25%
     left: 10%
     top: 15%
@@ -203,14 +220,14 @@ img
   bottom: -2%
   height: 30%
 
-  +breakpoint(tablet)
+  +breakpoint(laptop)
     height: 40%
     bottom: -8%
 
 .blob
   display: none
 
-  +breakpoint(tablet)
+  +breakpoint(laptop)
     display: block
     position: absolute
     height: 30%
@@ -223,7 +240,7 @@ img
   top: -5%
   left: 15%
 
-  +breakpoint(tablet)
+  +breakpoint(laptop)
     height: 40%
     top: -15%
     left: 5%
@@ -234,7 +251,7 @@ img
   bottom: -15%
   right: 5%
 
-  +breakpoint(tablet)
+  +breakpoint(laptop)
     height: 45%
     bottom: -5%
     right: 5%
@@ -246,7 +263,7 @@ img
   bottom: 5%
   height: 20%
 
-  +breakpoint(tablet)
+  +breakpoint(laptop)
     left: 8%
     bottom: 10%
     height: 25%
