@@ -82,7 +82,9 @@
       div className: 'page giftlist',
         div className: 'content',
           p className:'pad-bottom' , "The best gift you can give us is to be with us on the day. However, if you really, really want to get us something, we've put together a list of things which will help us set up home."
-          p className:'pad-bottom', "Find it at John Lewis with gift list number: 677417."
+          p className:'pad-bottom', "Find it at ",
+            a href:'https://www.johnlewisgiftlist.com/giftint/JSPs/GiftList/BuyGifts/GuestFindAList.jsp', "John Lewis"
+            span null, " with gift list number: 677417."
           p className:'small', "P.S Our new flat is super tiny and we want to avoid getting 500 champagne flutes, so we'd appreciate if you stick to the list!"
         img className:'plant', src: "<%= asset_path('plant.png') %>"
         img className:'banana', src: "<%= asset_path('banana.png') %>"
